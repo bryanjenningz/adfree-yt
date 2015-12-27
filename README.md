@@ -1,2 +1,2 @@
 # adfree-yt
-A faster, ad-free alternative to youtube for mobile users.
+A faster, ad-free YouTube.
