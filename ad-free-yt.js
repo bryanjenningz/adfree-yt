@@ -5,7 +5,7 @@
 
   function search(event) {
     event.preventDefault();
-    console.log(searchBox.textContent);
-    searchBox.textContent = '';
+    console.log(searchBox.value);
+    searchBox.value = '';
   }
 })();
