@@ -4,16 +4,18 @@ searchForm.submit(search);
 
 function search(event) {
   event.preventDefault();
-  var url = "http://suggestqueries.google.com/complete/search?hl=en&ds=yt&client=youtube&hjson=t&jsonp=loadVideos&q=" 
-    + encodeURIComponent(searchBox.val()) + "&cp=1";
+  var url = 'http://suggestqueries.google.com/complete/search?hl=en&ds=yt&client=youtube&hjson=t&jsonp=loadVideos&q='
+    + encodeURIComponent(searchBox.val()) + '&cp=1';
   $.ajax({
-    type: "GET",
+    type: 'GET',
     url: url,
-    dataType: "script"
+    dataType: 'script'
   });
   searchBox.val('');
 }
 
 function loadVideos(data) {
   console.log(data);
+  var videoUrl = data[2].q;
+  console.log(videoUrl);
 }
